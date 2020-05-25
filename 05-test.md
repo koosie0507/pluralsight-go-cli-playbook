@@ -27,3 +27,10 @@ Generating cover profiles `go test -coverprofile=cover.out mylib`. Then analyse 
 using `go tool cover -html=cover.out`.
 
 To figure out how many times a statement was executed during a test run, use `-covermode count`.
+
+## Benchmarking
+
+To test all benchmarking tests in `mylib` run `go test -bench . mylib`.
+To test some benchmarking tests in `mylib` run `go test -bench Adding mylib`.
+To limit the benchmarking time, use `-benchtime 1s`. See docs for other examples of valid values.
+To find out memory allocation issues, add the `-benchmem` param.
