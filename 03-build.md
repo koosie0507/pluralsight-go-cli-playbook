@@ -35,3 +35,10 @@ To install a shared library `go install -linkshared -buildmode=shared hello`.
 Finally, `go build -linkshared cmds/hello`.
 
 You end up with a dynamically linked `hello` executable.
+
+### Exporting to C
+
+Prepare the Go source code, then do either: 
+
+* `go build -buildmode=c-archive src/cmds/hello/hello.go`, _or_
+* `go build -buildmode=c-shared src/cmds/hello/hello.go`
