@@ -30,3 +30,9 @@ func BenchmarkAddingNumbers(b *testing.B) {
 		add(2, 45)
 	}
 }
+
+func TestSayHello(t *testing.T) {
+	if sayHello("Go") != "Hello, Go!" {
+		t.Fail()
+	}
+}
