@@ -22,3 +22,16 @@ This will force writing libraries to disk (by default, `go build` doesn't do tha
 
 This will build intermediate dependencies. For instance, it will build imported packages
 as libraries, besides building the final executable.
+
+## Build Modes
+
+About: `go help buildmode`
+
+### Shared Libraries
+
+To build shared libraries, first `go build -buildmode=shared std`. Then `go build -buildmode=shared hello`.
+
+To install a shared library `go install -linkshared -buildmode=shared hello`.
+Finally, `go build -linkshared cmds/hello`.
+
+You end up with a dynamically linked `hello` executable.
