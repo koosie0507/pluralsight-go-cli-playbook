@@ -15,3 +15,12 @@ func Test_BasicChecks(t *testing.T) {
 		}
 	})
 }
+
+func Test_AddingNumbers(t *testing.T) {
+	t.Run("Add 1 and 2 returns 3", func(t *testing.T) {
+		r := add(1, 2)
+		if r != 3 {
+			t.Fail()
+		}
+	})
+}
